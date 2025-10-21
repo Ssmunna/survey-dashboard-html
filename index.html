@@ -9,7 +9,6 @@
 </head>
 <body class="bg-[#F5FBFB] font-sans text-gray-800">
   <div class="flex h-screen">
-
     <!-- Sidebar -->
     <aside class="w-64 bg-[#D6F5F3] flex flex-col justify-between p-4 fixed top-0 left-0 bottom-0">
         <div class="flex items-center justify-center py-6">
@@ -67,8 +66,8 @@
               </div>
       </header>
 
-          <!-- Start button group -->
-          <section class="w-full py-[41px] flex justify-end">
+      <!-- Start button group -->
+      <section class="w-full py-[41px] flex justify-end">
                 <div class="flex items-center gap-2">
                     <button class="flex items-center gap-2 px-4 py-2 border border-[#008080] rounded-md hover:bg-teal-50">
                         <i data-lucide="square-plus" class="w-[24px] h-[24px] text-[#008080] rounded-md"></i>
@@ -88,10 +87,10 @@
                     </button>
                 </div>
             </section>
-          <!-- Start button group -->
+      <!-- Start button group -->
 
-          <!-- Stats Cards -->
-          <section class="grid grid-cols-3 gap-6">
+      <!-- Stats Cards -->
+      <section class="grid grid-cols-3 gap-6">
             <div class="bg-[#004E4E] text-white rounded-lg p-6 text-center shadow">
               <p class="text-sm uppercase">Total Contacts</p>
               <h2 class="text-3xl font-semibold mt-2">10,560</h2>
@@ -106,8 +105,8 @@
             </div>
           </section>
 
-          <!-- Contact Classification -->
-          <section class="flex gap-10 mt-8 bg-[#E6FAFA]">
+      <!-- Contact Classification -->
+      <section class="flex gap-10 mt-8 bg-[#E6FAFA]">
             <!-- Pie Chart Placeholder -->
             <div class="flex-1 rounded-xl p-6 flex justify-center items-center w-[55%]">
               <div class="w-64 h-64 bg-gradient-to-br from-[#FF8C8C] via-[#FFD580] to-[#A2E4B8] rounded-full"></div>
@@ -130,11 +129,50 @@
             </div>
           </section>
 
-        <section class="flex gap-10 mt-8 bg-[#E6FAFA] p-[30px]">
-            <div class="w-full">
-                <h2 class="text-[24px] text-[#008080] font-[500]">List of Campaigns</h2>
-            </div>
-        </section>
+      <section class="w-full 10 mt-8 bg-[#E6FAFA] p-[30px]">
+          <div class="w-full">
+              <h2 class="text-[#008080] text-lg font-semibold mb-4">List of Campaigns</h2>
+
+              <div class="overflow-x-auto">
+                  <table class="w-full text-sm text-left text-gray-700">
+                      <thead class="bg-[#DFF4F4]">
+                          <tr>
+                              <th class="px-6 py-1.5 font-semibold text-[#008080] w-[20%]">Date</th>
+                              <th class="px-6 py-1.5 font-semibold text-[#008080] w-[25%]">Campaigns</th>
+                              <th class="px-6 py-1.5 font-semibold text-[#008080] w-[55%] text-center">Description</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td class="px-6 py-1.5">25/12/2025</td>
+                              <td class="px-6 py-1.5">Campaigns 1</td>
+                              <td class="px-6 py-1.5">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</td>
+                          </tr>
+                          <tr>
+                              <td class="px-6 py-1.5">25/12/2025</td>
+                              <td class="px-6 py-1.5">Campaigns 1</td>
+                              <td class="px-6 py-1.5">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</td>
+                          </tr>
+                          <tr>
+                              <td class="px-6 py-1.5">25/12/2025</td>
+                              <td class="px-6 py-1.5">Campaigns 1</td>
+                              <td class="px-6 py-1.5">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</td>
+                          </tr>
+                          <tr>
+                              <td class="px-6 py-1.5">25/12/2025</td>
+                              <td class="px-6 py-1.5">Campaigns 1</td>
+                              <td class="px-6 py-1.5">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</td>
+                          </tr>
+                          <tr>
+                              <td class="px-6 py-1.5">25/12/2025</td>
+                              <td class="px-6 py-1.5">Campaigns 1</td>
+                              <td class="px-6 py-1.5">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </section>
     </main>
   </div>
 

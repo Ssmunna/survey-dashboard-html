@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-[#FFFFFF] font-sans text-gray-800">
+  <div class="flex h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-[#D6F5F3] flex flex-col justify-between p-4 fixed top-0 left-0 bottom-0">
+        <div class="flex items-center justify-center py-6">
+            <img src="./assets/logo.png" alt="Logo" class="w-30">
+        </div>
+
+        <nav class="mt-8 space-y-1">
+            <a href="#" class="flex items-center px-4 py-2 bg-[#006666] text-white rounded-lg">Dashboard</a>
+            <a href="#" class="flex items-center px-4 py-2 hover:bg-[#BFEDEB] rounded-lg">Campaigns</a>
+            <a href="#" class="flex items-center px-4 py-2 hover:bg-[#BFEDEB] rounded-lg">Contacts</a>
+            <a href="#" class="flex items-center px-4 py-2 hover:bg-[#BFEDEB] rounded-lg">Intelligence Engine</a>
+            <a href="#" class="flex items-center px-4 py-2 hover:bg-[#BFEDEB] rounded-lg">Reports & Analytics</a>
+            <a href="#" class="flex items-center px-4 py-2 hover:bg-[#BFEDEB] rounded-lg">Templates</a>
+        </nav>
+
+      <button class="flex items-center gap-2 px-4 py-2 text-white bg-[#006666] rounded-lg hover:bg-[#004E4E]">
+          <i data-lucide="arrow-left" class="w-[18px] h-[18px]"></i> Sign out
+      </button>
+    </aside>
+
+    <!-- Main Section -->
+    <main class="flex-1 flex flex-col py-[30px] pl-8 pr-4 ps-[280px]">
+      <!-- Top Navbar -->
+      <header class="flex items-center justify-between px-8 py-4 bg-[#D6F5F3] shadow-sm rounded-[8px]">
+        <div class="text-[24px] font-[500] text-[#008080]">Dashboard</div>
+          <div class="relative w-64">
+              <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 text-[#008080] w-[24px] h-[24px]"></i>
+              <input type="text" placeholder="Search" class="pl-10  pr-4 py-2 w-full bg-transparent border border-[#008080] rounded-[12px] focus:outline-none focus:ring-2 focus:ring-teal-400 placeholder:text-[#008080] placeholder:text-[14px]">
+          </div>
+
+          <div class="flex items-center gap-8" x-data="{ open: false }" @click.outside="open = false">
+
+              <!-- Notification Icon -->
+              <i data-lucide="bell-dot" class="w-[20px] h-[20px] text-[#008080]"></i>
+
+              <!-- Profile Section -->
+              <div class="relative">
+                  <button @click="open = !open" class="flex items-center gap-2 focus:outline-none">
+                      <img src="./assets/avatar.png" alt="User" class="w-[52px] h-[52px] rounded-full border object-cover">
+                      <span class="text-[16px] text-[#008080]">Saad Bin Hadi</span>
+                      <i data-lucide="chevron-down" class="text-[#008080]"></i>
+                  </button>
+
+                  <!-- Dropdown Menu -->
+                  <div
+                          x-show="open"
+                          x-transition
+                          class="absolute right-0 mt-2 w-48 bg-white border border-gray-100 rounded-lg shadow-lg py-2 z-50"
+                  >
+                      <a href="#profile" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#E6FAFA]">Profile</a>
+                      <a href="#settings" class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#E6FAFA]">Settings</a>
+                      <div class="border-t my-1"></div>
+                      <a href="#logout" class="block px-4 py-2 text-sm text-red-600 hover:bg-red-50">Sign out</a>
+                  </div>
+              </div>
+      </header>
+
+        <div class="w-full h-full flex justify-center items-center">
+            <div class="w-full max-w-md bg-white p-10 rounded-lg shadow-sm">
+                <!-- Title -->
+                <h1 class="text-2xl font-semibold text-[#006e6e] text-center mb-8">
+                    Personal Settings
+                </h1>
+
+                <!-- Profile Photo -->
+                <div class="flex justify-left mb-6 relative">
+                    <div class="relative">
+                        <img
+                                src="https://randomuser.me/api/portraits/men/32.jpg"
+                                alt="Profile"
+                                class="w-24 h-24 rounded-full object-cover border border-gray-200"
+                        />
+                        <button class="absolute bottom-1 right-1 bg-[#007a7a] p-2 rounded-full text-white hover:bg-[#006666] transition">
+                            <i class="size-3" data-lucide="pencil"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <form class="space-y-5">
+                    <!-- Name -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                        <input type="text" value="Abcddjhhh" class="w-full border border-gray-200 rounded-md px-3 py-3 focus:outline-none focus:ring-2 focus:ring-[#007a7a] text-gray-700"/>
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" value="xbdvsjfb" class="w-full border border-gray-200 rounded-md px-3 py-3 focus:outline-none focus:ring-2 focus:ring-[#007a7a] text-gray-700"/>
+                    </div>
+
+                    <!-- Role -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Role</label>
+                        <select class="w-full border border-gray-200 rounded-md bg-transparent px-3 py-3 focus:outline-none focus:ring-2 focus:ring-[#007a7a] text-gray-700">
+                            <option>Admin</option>
+                            <option>User</option>
+                            <option>Manager</option>
+                        </select>
+                    </div>
+
+                    <!-- Change Password -->
+                    <div>
+                        <button type="button" class="border border-[#007a7a] text-[#007a7a] px-4 py-3 rounded-md hover:bg-[#e6f5f5] transition w-auto">
+                            Change password
+                        </button>
+                    </div>
+
+                    <!-- Create Account -->
+                    <button type="submit" class="w-full bg-[#007a7a] text-white py-2.5 rounded-md font-medium hover:bg-[#006666] transition-colors">
+                        Create account
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+      lucide.createIcons();
+  </script>
+</body>
+</html>
+
